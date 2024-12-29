@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  // 00:52:00
+  // 1:35:12
   return (
     <div className="">
       <p>Lets bilud</p>
