@@ -16,6 +16,7 @@ import stringToColor from "@/lib/stringToColor";
 
 type EditorProps = {
   doc: Y.Doc;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   provider: any;
   darkMode: boolean;
 };
