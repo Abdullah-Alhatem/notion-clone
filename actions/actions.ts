@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 "use server";
 
 // From client components you can call a server components (without to carry API end point and do some other stuff)
@@ -55,7 +56,26 @@ export async function deleteDocument(roomId: string) {
     await liveblocks.deleteRoom(roomId);
 
     return { success: true };
+  } catch (error) {
+    console.error(error);
+    return { success: false };
+  }
+}
 
+export async function inviteUserToDocument(roomId: string, email: string) {
+  await auth.protect();
+
+  console.log("inviteUserToDocument", roomId, email);
+
+  try {
+    await adminDb
+      .collection("users")
+      .doc(email)
+      .collection("rooms")
+      .doc(roomId)
+      .set({ userId: email, role: "editor", createdAt: new Date(), roomId });
+
+    return { success: true };
   } catch (error) {
     console.error(error);
     return { success: false };
