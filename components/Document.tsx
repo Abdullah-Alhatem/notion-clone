@@ -10,6 +10,8 @@ import Editor from "./Editor";
 import useOwner from "@/lib/useOwner";
 import DeleteDocument from "./DeleteDocument";
 import InviteUser from "./InviteUser";
+import ManageUsers from "./ManageUsers";
+import Avatars from "./Avatars";
 
 function Document({ id }: { id: string }) {
   const [data] = useDocumentData(doc(db, "documents", id));
@@ -46,26 +48,26 @@ function Document({ id }: { id: string }) {
 
           {isOwner && (
             <>
-            {/* InviteUser */}
-            <InviteUser />
-            {/* DeleteDocument */}
-            <DeleteDocument/>
+              {/* InviteUser */}
+              <InviteUser />
+              {/* DeleteDocument */}
+              <DeleteDocument />
             </>
           )}
         </form>
       </div>
 
-      <div>
-        {/* ManageUsers */}
+      <div className="flex max-w-6xl mx-auto justify-between items-center mb-5">
+        <ManageUsers />
+
         {/* Avatars */}
+        <Avatars />
       </div>
 
       <hr className="pb-10" />
 
       {/* collaborative Editor */}
-      <Editor/>
-
-
+      <Editor />
     </div>
   );
 }
