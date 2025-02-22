@@ -59,14 +59,11 @@ function Document({ id }: { id: string }) {
 
       <div className="flex max-w-6xl mx-auto justify-between items-center mb-5">
         <ManageUsers />
-
-        {/* Avatars */}
         <Avatars />
       </div>
 
       <hr className="pb-10" />
 
-      {/* collaborative Editor */}
       <Editor />
     </div>
   );
