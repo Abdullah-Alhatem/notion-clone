@@ -58,8 +58,7 @@ function TranslateDocument({ doc }: { doc: Y.Doc }) {
     e.preventDefault();
     startTransition(async () => {
       const documentData = doc.get("document-store").toJSON(); // in a JSON format , so the way being stored in the database
-      console.log(documentData);
-
+      
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/translateDocument`,
         {
