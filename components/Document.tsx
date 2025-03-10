@@ -37,23 +37,25 @@ function Document({ id }: { id: string }) {
   };
 
   return (
-    <div className="flex-1 h-full bg-white p-5">
+    <div className="flex-1 h-full bg-white p-2 sm:p-5">
       <div className="flex max-w-6xl mx-auto justify-between pb-5">
-        <form className="flex flex-1 space-x-2 " onSubmit={updateTitle}>
-          {/* update title... */}
-          <Input value={input} onChange={e => setInput(e.target.value)} />
-          <Button disabled={isUpdating} type="submit">
-            {isUpdating ? "Updating..." : "Update"}
-          </Button>
-
-          {isOwner && (
-            <>
-              {/* InviteUser */}
-              <InviteUser />
-              {/* DeleteDocument */}
-              <DeleteDocument />
-            </>
-          )}
+        <form className="flex flex-1 flex-col gap-2 sm:space-x-2 sm:flex-row sm:gap-0 " onSubmit={updateTitle}>
+          <div className="flex flex-1 gap-1">
+            <Input value={input} onChange={e => setInput(e.target.value)} />
+            <Button disabled={isUpdating} type="submit">
+              {isUpdating ? "Updating..." : "Update"}
+            </Button>
+          </div>
+          <div className="flex justify-end sm:justify-normal gap-1">
+            {isOwner && (
+              <>
+                {/* InviteUser */}
+                <InviteUser />
+                {/* DeleteDocument */}
+                <DeleteDocument />
+              </>
+            )}
+          </div>
         </form>
       </div>
 
@@ -62,7 +64,7 @@ function Document({ id }: { id: string }) {
         <Avatars />
       </div>
 
-      <hr className="pb-10" />
+      <hr className=" pb-5 sm:pb-10" />
 
       <Editor />
     </div>

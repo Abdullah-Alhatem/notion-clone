@@ -72,7 +72,7 @@ function Editor() {
     return null; // if we don't have a doc or provider we don't render anything
   }
 
-  const style = `hover:text-white ${
+  const style = ` max-[380px]:p-2 max-[380px]:rounded-full hover:text-white ${
     darkMode
       ? "text-gray-300 bg-gray-700 hover:bg-gray-100 hover:text-gray-700"
       : "text-gray-700 bg-gray-200 hover:bg-gray-300 hover:text-gray-700"
@@ -80,12 +80,11 @@ function Editor() {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="flex items-center justify-end gap-2 mb-10">
-        {/* TranslateDocument AI */}
-        <TranslateDocument doc={doc} />
-        {/* ChatToDocument AI */}
-        <ChatToDocument doc={doc} />
-
+      <div className="flex max-[420px]:justify-center justify-end gap-[6px] mb-5 items-center sm:items-center sm:flex-row sm:justify-end sm:gap-2 sm:mb-10">
+        <div className="flex gap-1">
+          <TranslateDocument doc={doc} />
+          <ChatToDocument doc={doc} />
+        </div>
         {/* Dark Mode */}
         <Button className={style} onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? <SunIcon /> : <MoonIcon />}

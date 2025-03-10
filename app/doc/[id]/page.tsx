@@ -7,7 +7,7 @@ function DocumentPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
 
   return (
-    <div className="flex flex-1 flex-col min-h-screen">
+    <div className="flex flex-1 flex-col min-h-screen ">
       <Document id={id} />
     </div>
   );

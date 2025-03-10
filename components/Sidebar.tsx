@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { MenuIcon } from "lucide-react";
@@ -115,7 +114,7 @@ function Sidebar() {
   );
 
   return (
-    <div className="p-2 md:p-5 bg-gray-200 relative">
+    <div className=" max-[530px]:p-px p-1 sm:p-2 md:p-5 bg-gray-200 relative">
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>

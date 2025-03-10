@@ -26,7 +26,9 @@ function Header() {
 
       <div>
         <SignedOut>
-          <SignInButton />
+          <div className="hover:bg-gray-800 hover:text-white hover:shadow-md hover:shadow-gray-500 hover:translate-y-px transition delay-100 duration-300 ease-in-out rounded-md p-1 shadow-md shadow-gray-300">
+            <SignInButton />
+          </div>
         </SignedOut>
         <SignedIn>
           <UserButton />
