@@ -80,7 +80,7 @@ function Editor() {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="flex max-[420px]:justify-center justify-end gap-[6px] mb-5 items-center sm:items-center sm:flex-row sm:justify-end sm:gap-2 sm:mb-10">
+      <div className="flex max-[420px]:justify-end justify-end gap-[6px] mb-5 items-center sm:items-center sm:flex-row sm:justify-end sm:gap-2 sm:mb-10">
         <div className="flex gap-1">
           <TranslateDocument doc={doc} />
           <ChatToDocument doc={doc} />

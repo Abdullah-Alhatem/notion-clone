@@ -114,7 +114,7 @@ function Sidebar() {
   );
 
   return (
-    <div className=" max-[530px]:p-px p-1 sm:p-2 md:p-5 bg-gray-200 relative">
+    <div className="p-1 sm:p-2 md:p-5 bg-gray-200 relative">
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>
