@@ -66,7 +66,5 @@
 }
 
 .collaboration-cursor__caret {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
   position: absolute !important;
 }
