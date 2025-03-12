@@ -64,3 +64,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.collaboration-cursor__caret {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
