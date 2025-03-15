@@ -14,7 +14,7 @@ import { Button } from "./ui/button";
 import { toast } from "sonner";
 import { Input } from "./ui/input";
 import { BotIcon, MessageCircleCode } from "lucide-react";
-import { MarkdownAsync } from "react-markdown";
+import { MarkdownHooks } from "react-markdown";
 
 function ChatToDocument({ doc }: { doc: Y.Doc }) {
   const [input, setInput] = useState("");
@@ -85,7 +85,7 @@ function ChatToDocument({ doc }: { doc: Y.Doc }) {
               {isPending ? (
                 "Thinking..."
               ) : (
-                <MarkdownAsync>{summary}</MarkdownAsync>
+                <MarkdownHooks>{summary}</MarkdownHooks>
               )}
             </p>
           </div>

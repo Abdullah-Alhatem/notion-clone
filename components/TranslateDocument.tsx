@@ -20,7 +20,7 @@ import { Button } from "./ui/button";
 import { FormEvent, useState, useTransition } from "react";
 import { BotIcon, LanguagesIcon } from "lucide-react";
 import { toast } from "sonner";
-import { MarkdownAsync } from "react-markdown";
+import { MarkdownHooks } from "react-markdown";
 
 type language =
   | "english"
@@ -113,7 +113,7 @@ function TranslateDocument({ doc }: { doc: Y.Doc }) {
               {isPending ? (
                 "Thinking..."
               ) : (
-                <MarkdownAsync>{summary}</MarkdownAsync>
+                <MarkdownHooks>{summary}</MarkdownHooks>
               )}
             </p>
           </div>
