@@ -1,6 +1,10 @@
+import { Skeleton } from "@/components/ui/skeleton"
+
+
 function LoadingSpinner() {
   return (
-    <div role="status" className="flex items-center justify-center mt-10">
+    <>
+    <div role="status" className="flex items-center justify-center mt-10 mb-16">
       <svg
         aria-hidden="true"
         className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
@@ -19,6 +23,46 @@ function LoadingSpinner() {
       </svg>
       <span className="sr-only">Loading...</span>
     </div>
+
+    <div className="space-y-3 max-w-6xl mx-auto">
+      <Skeleton className="h-6 w-full" />
+      <Skeleton className="h-5 w-full" />
+      <Skeleton className="h-5 w-2/3" />
+      <Skeleton className="h-5 w-1/2" />
+      <Skeleton className="h-4 w-1/3" />
+      <Skeleton className="h-4 w-1/3" />
+      <Skeleton className="h-4 w-1/4" />
+      <Skeleton className="h-3 w-1/4" />
+      <Skeleton className="h-3 w-1/4" />
+      <Skeleton className="h-6 w-full" />
+      <Skeleton className="h-6 w-1/2" />
+      <Skeleton className="h-4 w-1/3" />
+      <Skeleton className="h-4 w-1/3" />
+      <Skeleton className="h-4 w-1/4" />
+      <Skeleton className="h-6 w-1/2" />
+      <Skeleton className="h-4 w-[250px] direction-reverse" />
+      <Skeleton className="h-6 w-1/3" />
+      <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+      <Skeleton className="h-6 w-full" />
+      <Skeleton className="h-5 w-full" />
+      <Skeleton className="h-5 w-2/3" />
+      <Skeleton className="h-5 w-1/2" />
+      <Skeleton className="h-4 w-1/3" />
+      <Skeleton className="h-4 w-1/3" />
+      <Skeleton className="h-4 w-1/4" />
+      <Skeleton className="h-3 w-1/4" />
+      <Skeleton className="h-3 w-1/4" />
+      <Skeleton className="h-6 w-full" />
+      <Skeleton className="h-6 w-1/2" />
+      <Skeleton className="h-4 w-1/3" />
+      <Skeleton className="h-4 w-1/3" />
+      <Skeleton className="h-4 w-1/4" />
+      <Skeleton className="h-6 w-1/2" />
+      <Skeleton className="h-4 w-[250px] direction-reverse" />
+      <Skeleton className="h-6 w-1/3" />
+      <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+    </div>
+  </>
   );
 }
 export default LoadingSpinner;
