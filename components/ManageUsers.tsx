@@ -18,6 +18,7 @@ import { useRoom } from "@liveblocks/react/suspense";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collectionGroup, query, where } from "firebase/firestore";
 import { db } from "@/firebase";
+import { Users } from "lucide-react";
 
 function ManageUsers() {
   const { user } = useUser();
@@ -47,8 +48,8 @@ function ManageUsers() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <Button asChild variant="outline">
-        <DialogTrigger>Users ({UsersInRoom?.docs.length})</DialogTrigger>
+      <Button asChild variant="outline" className="p-2 flex justify-center items-center gap-1">
+        <DialogTrigger><Users size={16} />Users ({UsersInRoom?.docs.length})</DialogTrigger>
       </Button>
       <DialogContent>
         <DialogHeader>

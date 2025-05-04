@@ -14,6 +14,7 @@ import { usePathname } from "next/navigation";
 import { inviteUserToDocument } from "@/actions/actions";
 import { toast } from "sonner";
 import { Input } from "./ui/input";
+import { UserPlus } from "lucide-react";
 
 function InviteUser() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,8 +43,8 @@ function InviteUser() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <Button asChild variant="outline">
-        <DialogTrigger>Invite</DialogTrigger>
+      <Button asChild variant="outline" className="p-2 flex justify-center items-center gap-1">
+        <DialogTrigger><UserPlus size={16} />Invite</DialogTrigger>
       </Button>
       <DialogContent>
         <DialogHeader>

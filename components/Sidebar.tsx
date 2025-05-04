@@ -1,6 +1,6 @@
 "use client";
 
-import { MenuIcon } from "lucide-react";
+import { FileText, MenuIcon, Share2 } from "lucide-react";
 import NewDocumentButton from "./NewDocumentButton";
 import {
   Sheet,
@@ -89,8 +89,8 @@ function Sidebar() {
           </h2>
         ) : (
           <>
-            <h2 className="text-gray-500 font-semibold text-sm ">
-              My Documents
+            <h2 className="text-gray-500 font-semibold text-sm flex gap-1 items-center justify-center ">
+            <FileText size={18}></FileText>My Documents
             </h2>
             {groupedData.owner.map(doc => (
               <SidebarOption key={doc.id} id={doc.id} href={`/doc/${doc.id}`} />
@@ -101,8 +101,8 @@ function Sidebar() {
         {/* Shared with me */}
         {groupedData.editor.length > 0 && (
           <>
-            <h2 className="text-gray-500 font-semibold text-sm">
-              Shared with Me
+            <h2 className="text-gray-500 font-semibold text-sm flex gap-1 items-center justify-center">
+              <Share2 size={18} ></Share2>Shared with Me
             </h2>
             {groupedData.editor.map(doc => (
               <SidebarOption key={doc.id} id={doc.id} href={`/doc/${doc.id}`} />
@@ -117,8 +117,9 @@ function Sidebar() {
     <div className="p-1 sm:p-2 md:p-5 bg-gray-200 relative">
       <div className="md:hidden">
         <Sheet>
-          <SheetTrigger>
-            <MenuIcon className="p-2 hover:opacity-30 rounded-lg" size={40} />
+          <SheetTrigger className="flex flex-row items-center w-full ">
+            <MenuIcon className=" p-2 hover:opacity-30 rounded-lg" size={40} />
+            <p className="min-[450px]:hidden hover:opacity-30 font-medium">Other Documents</p>
           </SheetTrigger>
           <SheetContent side="left">
             <SheetHeader>

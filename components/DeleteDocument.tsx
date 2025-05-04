@@ -15,6 +15,7 @@ import { Button } from "./ui/button";
 import { usePathname, useRouter } from "next/navigation";
 import { deleteDocument } from "@/actions/actions";
 import { toast } from "sonner";
+import { Trash2 } from "lucide-react";
 
 function DeleteDocument() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,8 +42,8 @@ function DeleteDocument() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <Button asChild variant="destructive">
-        <DialogTrigger>Delete</DialogTrigger>
+      <Button asChild variant="destructive" className="p-2 flex justify-center items-center gap-1">
+        <DialogTrigger><Trash2 size={16}/>Delete</DialogTrigger>
       </Button>
       <DialogContent>
         <DialogHeader>

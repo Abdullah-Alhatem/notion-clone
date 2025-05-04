@@ -21,8 +21,15 @@ export default function RootLayout({
         <body>
           <Header />
           <div className="flex min-h-screen">
-            <Sidebar />
+            {/* Desktop Sidebar */}
+            <div className="hidden min-[450px]:block bg-gray-200">
+              <Sidebar />
+            </div>
             <div className="flex-1 max-[450px]:p-1 p-2 sm:p-4 bg-gray-100 overflow-y-auto scroll-smooth scrollbar-hide">
+              {/* Mobile Sidebar */}
+              <div className="min-[450px]:hidden bg-gray-200 mb-1 ">
+                <Sidebar />
+              </div>
               {children}
             </div>
           </div>

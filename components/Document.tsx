@@ -12,7 +12,7 @@ import DeleteDocument from "./DeleteDocument";
 import InviteUser from "./InviteUser";
 import ManageUsers from "./ManageUsers";
 import Avatars from "./Avatars";
-
+import { PencilIcon } from "@primer/octicons-react";
 function Document({ id }: { id: string }) {
   const [data] = useDocumentData(doc(db, "documents", id));
   const [input, setInput] = useState("");
@@ -39,10 +39,14 @@ function Document({ id }: { id: string }) {
   return (
     <div className="flex-1 h-full bg-white p-2 sm:p-5">
       <div className="flex max-w-6xl mx-auto justify-between pb-5">
-        <form className="flex flex-1 flex-col gap-2 sm:space-x-2 sm:flex-row sm:gap-0 " onSubmit={updateTitle}>
+        <form
+          className="flex flex-1 flex-col gap-2 sm:space-x-2 sm:flex-row sm:gap-0 "
+          onSubmit={updateTitle}
+        >
           <div className="flex flex-1 gap-1">
             <Input value={input} onChange={e => setInput(e.target.value)} />
-            <Button disabled={isUpdating} type="submit">
+            <Button disabled={isUpdating} type="submit" className="p-2 flex justify-center items-center gap-1">
+              <PencilIcon size={16} />
               {isUpdating ? "Updating..." : "Update"}
             </Button>
           </div>
