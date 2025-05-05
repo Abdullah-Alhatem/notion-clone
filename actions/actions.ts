@@ -100,3 +100,26 @@ export async function removeUserFromDocument(roomId: string, email: string) {
     return { success: false };
   }
 }
+
+export async function exitDocument(roomId: string, email: string) {
+  await auth.protect();
+
+  console.log("exitDocument", roomId, email);
+
+  try {
+    // Exit the document (just delete the document from me'Editor') without any effects on other users
+
+    await adminDb
+      .collection("users")
+      .doc(email)
+      .collection("rooms")
+      .doc(roomId)
+      .delete();
+
+    return { success: true };
+  } catch (error) {
+    console.error(error);
+    return { success: false };
+  }
+}
+

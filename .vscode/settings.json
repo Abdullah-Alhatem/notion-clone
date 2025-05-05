@@ -1,5 +1,14 @@
 {
-  "cSpell.words": ["firestore", "liveblocks", "sonner", "افتارر", "غلاف"],
+  "cSpell.words": [
+    "blocknote",
+    "firestore",
+    "liveblocks",
+    "shadcn",
+    "sonner",
+    "turbopack",
+    "افتارر",
+    "غلاف"
+  ],
   "commentTranslate.targetLanguage": "ar",
   "commentTranslate.hover.enabled": false,
   "commentTranslate.source": "Google",

@@ -13,6 +13,7 @@ import InviteUser from "./InviteUser";
 import ManageUsers from "./ManageUsers";
 import Avatars from "./Avatars";
 import { PencilIcon } from "@primer/octicons-react";
+import ExitDocument from "./ExitDocument";
 function Document({ id }: { id: string }) {
   const [data] = useDocumentData(doc(db, "documents", id));
   const [input, setInput] = useState("");
@@ -57,6 +58,11 @@ function Document({ id }: { id: string }) {
                 <InviteUser />
                 {/* DeleteDocument */}
                 <DeleteDocument />
+              </>
+            )}
+            {!isOwner && (
+              <>
+                <ExitDocument />
               </>
             )}
           </div>
